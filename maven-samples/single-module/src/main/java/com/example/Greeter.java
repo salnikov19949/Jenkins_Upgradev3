@@ -16,4 +16,18 @@ public class Greeter {
   public String greet(String someone) {
     return String.format("Hello, %s!", someone);
   }
+
+  @Test
+  public void greetShouldIncludeGreetingPhrase() {
+    String someone = "World";
+
+    assertThat(greeter.greet(someone).length(), is(greaterThan(someone)
+  }
+
+  @Test
+  public void greetShouldIncludeGreetingPhrase() {
+    String someone = "World, Thanks you making me happy";
+
+    assertThat(greeter.greet(someone).length(), is(greaterThan(someone)
+  }
 }
